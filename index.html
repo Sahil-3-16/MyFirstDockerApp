@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Validation</title>
+
+    <script>
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+
+            // Check for @ and . characters
+            if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+                alert("Invalid Email Address!\nPlease enter a valid email containing '@' and '.'.");
+                
+                return false;
+            }
+
+            alert("Email Address is Valid!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Email Address Validation</h2>
+
+    <form onsubmit="return validateEmail()">
+        <label>Enter Email Address:</label>
+        <input type="text" id="email" placeholder="example@gmail.com">
+
+        <br><br>
+
+        <input type="submit" value="Validate">
+    </form>
+
+</body>
+</html>
